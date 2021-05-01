@@ -1,0 +1,25 @@
+<apex:page standardController="contact">
+  <!-- Begin Default Content REMOVE THIS -->
+  <apex:pageBlock title="Welcome">
+      <b>{!$User.FirstName} {!$User.LastName}</b><br/>
+  </apex:pageBlock>
+  
+    
+    <apex:form >
+    <apex:pageBlock title="Enter detail Below:">
+    <apex:pageBlockButtons title="test"></apex:pageBlockButtons>
+    <apex:pageBlockSection title="Enter Details" columns="2">
+    <apex:inputField value="{!contact.firstname}"/>
+    <apex:inputField value="{!contact.lastname}"/>
+    <apex:inputField value="{!contact.email}"/>
+    <apex:inputField value="{!contact.phone}"/>
+    </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+    <apex:commandButton value="Submit" action="{!Save}"/>
+    <apex:commandButton value="Cancel" action="{!Cancel}"/>
+    
+    
+    
+    </apex:form>
+</apex:page>
